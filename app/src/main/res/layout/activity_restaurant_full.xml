@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:layout_editor_absoluteY="81dp">
+    android:id="@+id/root">
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline2"
@@ -15,43 +15,59 @@
 
     <ImageView
         android:id="@+id/img"
-        android:layout_width="384dp"
-        android:layout_height="511dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@color/imgBg" />
 
     <ImageView
         android:id="@+id/mask"
-        android:layout_width="384dp"
-        android:layout_height="511dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img"
         app:srcCompat="@drawable/mask" />
 
     <TextView
         android:id="@+id/name"
-        android:layout_width="368dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="476dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:text="Nombre Restaurante" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
         android:clickable="true"
         app:fabSize="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_arrow" />
+        app:srcCompat="@drawable/ic_favorite" />
 
     <android.support.v7.widget.CardView
         android:id="@+id/cardAttr"
-        android:layout_width="1dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="192dp"
-        tools:layout_editor_absoluteY="511dp">
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -103,10 +119,15 @@
 
     <android.support.v7.widget.CardView
         android:id="@+id/cardDesc"
-        android:layout_width="1dp"
-        android:layout_height="1dp"
-        tools:layout_editor_absoluteX="192dp"
-        tools:layout_editor_absoluteY="511dp">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardAttr">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
